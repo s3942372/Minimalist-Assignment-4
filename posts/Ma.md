@@ -7,6 +7,7 @@ allow_math: true
 ---
 
 # Ma Reflection
+
 This interactive 'art' tool was created in response to the Japanese concept of 'Ma' and minimalist design. "Ma" presents the idea that there is meaning in empty spaces, and that it is a part of a whole, working together with everything else to create something complete.
 
 My plan for this interactive work was to combine the ideas of 'Ma' with that of the traditional art of Chinese paper cutting. Paper cutting makes use of the empty negative space (the areas that are cut out) to help form the image a person wishes to make. I figured that I could replicate this experience by making it so that the users interacting with the website are clicking and dragging their mouse around a black space, and upon releasing their mouse a shape is formed and filled in white on screen, visually resembling a piece of paper that had a hole cut into it. Like so, users would have to carefully think as they go about using this art tool, as there is no undo button and any mistakes means users will have to start all over, much like how actual paper cutting is. ‘Ma’ provokes thought and gives meaning to empty spaces, and the intention of this work is for users to give meaning to the empty spaces they form themselves.
@@ -177,14 +178,7 @@ The final interactive work was something that was rather fun to play around with
 Despite this failure, I do think that for the first assignment, it was a fairly okay piece of work. I had a smooth journey in making this interactive work, having come up with the idea for it immediately in class, as well as being familiar enough with the chosen coding languages to produce a working website. Though this was my least 'playful' work of the six, it was still something that offered a fun interaction, something that will set the tone for the rest of my interactive pieces.
 
 ## Video Recording
-<iframe id="ma_art_tool" src="/static/assignment1/s3942372_A1_Recording.mp4" title="Ma Art Tool" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-<script type="module">
+Here is a video recording of my interactive work:
 
-    console.log (`Look At Me Draw`)
-
-    const iframe  = document.getElementById (`ma_art_tool`)
-    iframe.width  = iframe.parentNode.scrollWidth
-    iframe.height = iframe.width * 9 / 16
-
-</script>
+![Watch Me Draw](/static/assignment1/s3942372_A1_Recording.mp4)
