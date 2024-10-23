@@ -175,3 +175,16 @@ I was most satisfied with this version as it most closely reflected the act of P
 The final interactive work was something that was rather fun to play around with once you get into it, however, as mentioned in the comment for this assignment, the depth of the concept is somewhat lacking, with the focus of interaction split into two: the clicking and dragging of the mouse, and the interplay between positive and negative spaces. I was too focused on trying to create a digitalised version of Paper Cutting, that I lost focus on what the assignment brief was actually asking of us and to draw the users focus on to a specific interaction.
 
 Despite this failure, I do think that for the first assignment, it was a fairly okay piece of work. I had a smooth journey in making this interactive work, having come up with the idea for it immediately in class, as well as being familiar enough with the chosen coding languages to produce a working website. Though this was my least 'playful' work of the six, it was still something that offered a fun interaction, something that will set the tone for the rest of my interactive pieces.
+
+## Video Recording
+<iframe id="ma_art_tool" src="/static/assignment1/s3942372_A1_Recording.mp4" title="Ma Art Tool" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<script type="module">
+
+    console.log (`Look At Me Draw`)
+
+    const iframe  = document.getElementById (`ma_art_tool`)
+    iframe.width  = iframe.parentNode.scrollWidth
+    iframe.height = iframe.width * 9 / 16
+
+</script>
