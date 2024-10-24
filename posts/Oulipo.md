@@ -14,7 +14,7 @@ For this second half of assignment 2, I chose to focus on the 'Oulipo' (or in fu
 
 ## The Process
 
-During my preparation for this interactice work, I had researched on different types of 'Oulipo' techniques, before ultimately focusing on the 'cut-up' technique, where you cut up lines of a piece of work to create a new story. My original idea was for there to be words scattered across the bottom of the website, and users could click and drag them across the screen to form sentences. Forming the right sentence would trigger a change in the website, such as an image appearing.
+During my preparation for this interactive work, I had researched on different types of 'Oulipo' techniques, before ultimately focusing on the 'cut-up' technique, where you cut up lines of a piece of work to create a new story. My original idea was for there to be words scattered across the bottom of the website, and users could click and drag them across the screen to form sentences. Forming the right sentence would trigger a change in the website, such as an image appearing.
 
 ![OG Plan](/static/assignment2/og.png)
 
@@ -36,17 +36,62 @@ Just like the previous assignment, I had decided to code out the entire interact
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hint Fiction</title>
+    <title>Oulipo</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="story-container">
-        <div class="sentence" id="sentence1">It</div>
-        <div class="sentence" id="sentence2">Squirmed</div>
-        <div class="sentence" id="sentence3">About</div>
-        <div class="sentence" id="sentence4">Its</div>
-        <div class="sentence" id="sentence5">Cage</div>
+    <div class="tables-container">
+        <table id="table1">
+            <tbody>
+                <tr>
+                    <td data-target="1-1">Some</td>
+                    <td data-target="1-2">A</td>
+                    <td data-target="1-3">The</td>
+                </tr>
+                <tr>
+                    <td data-target="2-1">On</td>
+                    <td data-target="2-2">Prepares</td>
+                    <td data-target="2-3">Strap</td>
+                </tr>
+                <tr>
+                    <td data-target="3-1">Hospital</td>
+                    <td data-target="3-2">Restraints</td>
+                    <td data-target="3-3">Instruments</td>
+                </tr>
+                <tr>
+                    <td data-target="4-1">Torture</td>
+                    <td data-target="4-2">Cries</td>
+                    <td data-target="4-3">Themselves</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table id="table2">
+            <tbody>
+                <tr>
+                    <td data-target="1-1">Nurses</td>
+                    <td data-target="1-2">Child</td>
+                    <td data-target="1-3">Doctor</td>
+                </tr>
+                <tr>
+                    <td data-target="2-1">The</td>
+                    <td data-target="2-2">His</td>
+                    <td data-target="2-3">The</td>
+                </tr>
+                <tr>
+                    <td data-target="3-1">Of</td>
+                    <td data-target="3-2">For</td>
+                    <td data-target="3-3">Bed</td>
+                </tr>
+                <tr>
+                    <td data-target="4-1">Steadily</td>
+                    <td data-target="4-2">Out</td>
+                    <td data-target="4-3">On</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
+    <div id="background-image"></div>
     <script src="script.js"></script>
 </body>
 </html>
@@ -54,181 +99,118 @@ Just like the previous assignment, I had decided to code out the entire interact
 ```css
 body {
     margin: 0;
-    overflow: hidden;
-    background-color: #f0f8ff;
     font-family: Arial, sans-serif;
-    position: relative;
-}
-
-#story-container {
-    position: relative;
-    width: 100%;
     height: 100vh;
     overflow: hidden;
-    background-image: url(img/background1.png);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tables-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+table {
+    border-collapse: collapse;
+    width: 200px;
+    margin: 10px;
+}
+
+td {
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+td:hover {
+    background-color: #f0f0f0;
+}
+
+td.clicked {
+    background-color: #5ab2ff;
+}
+
+#background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-size: cover;
     background-position: center;
-    cursor: pointer;
-}
-
-.sentence {
-    position: absolute;
-    font-size: 24px;
-    margin: 5px;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-    color: whitesmoke;
-    text-shadow: 2px 2px 0 black, 
-                 -2px -2px 0 black,  
-                 2px -2px 0 black,  
-                 -2px 2px 0 black;
-}
-
-#sentence1 {
-    top: 10%;
-    left: 10%;
-}
-
-#sentence2 {
-    top: 20%;
-    left: 30%;
-}
-
-#sentence3 {
-    top: 40%;
-    left: 50%;
-}
-
-#sentence4 {
-    top: 60%;
-    left: 70%;
-}
-
-#sentence5 {
-    top: 80%;
-    left: 90%;
+    z-index: -1;
+    transition: background-image 1s ease-in-out;
 }
 ```
 ```javascript
 document.addEventListener('DOMContentLoaded', () => {
-    const sentences = [
-        "It squirmed about its cage",
-        "feasted upon the dead and",
-        "slept inside a blanket of",
-        "the finest silk biding time",
-        "until it finally was released",
+    const sequences = [
+        ['1-1', '1-1', '2-3', '2-1', '3-2', '3-2', '4-1', '4-3'],
+        ['1-2', '1-3', '2-2', '2-2', '3-3', '3-1', '4-1', '4-1'],
+        ['1-3', '1-2', '2-1', '2-3', '3-1', '3-3', '4-2', '4-2']
     ];
 
     const backgroundImages = [
-        'img/cage.jpg',
-        'img/feast.jpg',
-        'img/slept.jpg',
-        'img/blanket.webp',
-        'img/boil.webp',
+        'url(img/bg1.jpg)',
+        'url(img/bg2.jpg)',
+        'url(img/bg3.jpg)',
     ];
 
-    const container = document.getElementById('story-container');
-    let currentSentenceIndex = 0;
-    const usedPositions = [];
-    const spacing = 150;
-    let allSentencesDisplayed = false;
+    let currentSequenceIndex = 0;
+    let currentStep = 0;
 
-    function getUniquePosition() {
-        let top, left;
-        let isValidPosition = false;
+    function handleCellClick(event) {
+        const cell = event.target;
+        const target = cell.getAttribute('data-target');
 
-        while (!isValidPosition) {
-            top = `${Math.random() * (container.clientHeight - spacing)}px`;
-            left = `${Math.random() * (container.clientWidth - spacing)}px`;
+        if (target === sequences[currentSequenceIndex][currentStep]) {
+            cell.classList.add('clicked');
+            currentStep++;
 
-            isValidPosition = !isOverlapping(top, left);
-        }
+            if (currentStep >= sequences[currentSequenceIndex].length) {
+                // Apply corresponding background image
+                const backgroundImage = backgroundImages[currentSequenceIndex];
+                document.getElementById('background-image').style.backgroundImage = backgroundImage;
+                
+                // Reset for next interactions
+                currentStep = 0;
+                document.querySelectorAll('.clicked').forEach(clickedCell => {
+                    clickedCell.classList.remove('clicked');
+                });
 
-        usedPositions.push({ top, left });
-        return { top, left };
-    }
-
-    function isOverlapping(top, left) {
-        return usedPositions.some(position => {
-            return Math.abs(parseInt(top) - parseInt(position.top)) < spacing &&
-                   Math.abs(parseInt(left) - parseInt(position.left)) < spacing;
-        });
-    }
-
-    function fadeOutAllSentences() {
-        const sentences = document.querySelectorAll('.sentence');
-        sentences.forEach(sentence => {
-            sentence.style.transition = 'opacity 0.5s';
-            sentence.style.opacity = 0;
-            setTimeout(() => {
-                if (sentence) {
-                    container.removeChild(sentence);
-                }
-            }, 500);
-        });
-    }
-
-    function changeBackgroundImage() {
-        if (backgroundImages.length > 0) {
-            const imageIndex = currentSentenceIndex % backgroundImages.length;
-            container.style.transition = 'background-image 0.5s';
-            container.style.backgroundImage = `url('${backgroundImages[imageIndex]}')`;
-        }
-    }
-
-    function fadeInSentences() {
-        if (currentSentenceIndex >= sentences.length) {
-            allSentencesDisplayed = true;
-            return;
-        }
-
-        const sentenceElement = document.createElement('div');
-        sentenceElement.classList.add('sentence');
-        sentenceElement.id = `sentence${currentSentenceIndex + 6}`;
-        sentenceElement.textContent = sentences[currentSentenceIndex];
-        sentenceElement.style.opacity = 0;
-        container.appendChild(sentenceElement);
-
-        const { top, left } = getUniquePosition();
-        sentenceElement.style.top = top;
-        sentenceElement.style.left = left;
-
-        setTimeout(() => {
-            sentenceElement.style.transition = 'opacity 0.5s';
-            sentenceElement.style.opacity = 1;
-        }, 10); // Short delay to ensure transition is applied
-
-        changeBackgroundImage();
-
-        currentSentenceIndex++;
-    }
-
-    document.addEventListener('click', () => {
-        if (allSentencesDisplayed) {
-            fadeOutAllSentences();
-            container.style.backgroundImage = '';
-            currentSentenceIndex = 0;
-            usedPositions.length = 0;
-            allSentencesDisplayed = false;
+                currentSequenceIndex = (currentSequenceIndex + 1) % sequences.length;
+            }
         } else {
-            fadeInSentences();
+            currentStep = 0;
+            document.querySelectorAll('.clicked').forEach(clickedCell => {
+                clickedCell.classList.remove('clicked');
+            });
         }
+    }
+
+    document.querySelectorAll('td').forEach(cell => {
+        cell.addEventListener('click', handleCellClick);
     });
 });
 ```
 
 ## The Outcome
 
-Working on this second half of the assignment was definitely a lot easier than the first half, and though I did encounter some problems with my initial iteration of the work, I was able to overcome this fairly quickly. Part of this was due to the limited time I had, as I had been down with a cold for one week, then by an allergic reaction to my medication the next. I then struggled with the other half of the assignment, having spent time on it until I only had 2 days' time to start and finish this one. The looming deadline wass most definitely a motivating factor, as well as the sheer frustration I felt over the other interactive work.
+Working on this second half of the assignment was definitely a lot easier than the first half, and though I did encounter some problems with my initial iteration of the work, I was able to overcome this fairly quickly. Part of this was due to the limited time I had, as I had been down with a cold for one week, then by an allergic reaction to my medication the next. I then struggled with the other half of the assignment, having spent time on it until I only had 2 days' time to start and finish this one. The looming deadline was most definitely a motivating factor, as well as the sheer frustration I felt over the other interactive work.
 
 Despite all that though, I was still quite satisfied with the finished product for this one. Of course, if I had more time I might have made more sentences the users could play around with, or drawn out the scenes instead of using image substitutes. I do think that the way it ended up being had fit quite well with the themes of limits and constraints we had, and the fact that there are no instructions - so the users have to guess and figure out themselves what they're meant to do - parallels how I felt all those years ago, strapped down to a table, not knowing what was happening. As users piece together the sentences they slowly come to understand the story(?) that is being told, and the image appearing in the background once a sentence is complete further drives it home.
 
 The final interactive work was something that can be frustrating to newcomers, as they do have to try and memorise the sequence of when and what to click. This was an intentional part of the design, as the limits placed on the users was meant to mimic the restraints placed on me all those years ago. This one was also definitely a more cohesive design than that of the 'Hint Fiction' and 'Ma' interactive works, delivering aspects of both the 'Oulipo' and that of my memory clearly.
 
-The design of this one is more playful than that of the previous two works, with a puzzle-solving-esque element making up the main interaction for the users. Both my 'Oulipo' and my 'Hint Fiction' works also lead me to want to explore more narrative-based interactions, games with plot and storylines, which does end up influencing my last three works for this course.
+The design of this one is more playful than that of the previous two works, with a puzzle-solving-esque element making up the main interaction for the users. Both my 'Oulipo' and my 'Hint Fiction' works also lead me to want to explore more narrative-based interactions, games with plot and storylines, which dsoes end up influencing my last three works for this course.
 
 ## Video Recording
 
 Here is a video recording of my interactive work:
 
-![Watch Me Draw](/static/assignment2/Oulipo.mp4)
+[Oulipo Recording](/static/assignment2/Oulipo.mp4)

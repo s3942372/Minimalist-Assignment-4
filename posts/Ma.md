@@ -187,4 +187,4 @@ Despite this failure, I do think that for the first assignment, it was a fairly 
 
 Here is a video recording of my interactive work:
 
-![Watch Me Draw](/static/assignment1/s3942372_A1_Recording.mp4)
+[Watch Me Draw](/static/assignment1/s3942372_A1_Recording.mp4)
