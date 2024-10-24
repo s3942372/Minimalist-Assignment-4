@@ -1,5 +1,5 @@
 ---
-title: HF
+title: Hint Fiction
 published_at: 2024-10-23
 snippet: Reflection of my second assignment part 1.
 disable_html_sanitization: true

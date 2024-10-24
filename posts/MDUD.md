@@ -1,5 +1,5 @@
 ---
-title: MDUD
+title: My Dress Up Doll
 published_at: 2024-10-24
 snippet: Reflection of my third assignment part 1.
 disable_html_sanitization: true
