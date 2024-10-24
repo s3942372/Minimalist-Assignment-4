@@ -6,7 +6,7 @@ disable_html_sanitization: true
 allow_math: true
 ---
 
-# Oulipo Reflection
+# Hint Fiction Reflection
 
 ## The Plan
 
