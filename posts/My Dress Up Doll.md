@@ -10,6 +10,8 @@ allow_math: true
 
 ## The Plan
 
+Why wont you work?
+
 For the first half of assignment 2, I chose to focus on the topic of 'Hint Fiction' (a form of extremely short story that is told in 25 words or less). When it comes to 'Hint Fiction', the more constraints, the greater the creation - and in this case - the less words, the more expansive the story. Because of this, what a hint fiction story is about is often up to interpretation. I wanted to try and utilise this aspect for the memory I chose: that of raising silkworms in class during 3rd grade, only for them to be taken and made into silk the minute they turned into cocoons.
 
 ## The Process
