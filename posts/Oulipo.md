@@ -226,3 +226,9 @@ Despite all that though, I was still quite satisfied with the finished product f
 The final interactive work was something that can be frustrating to newcomers, as they do have to try and memorise the sequence of when and what to click. This was an intentional part of the design, as the limits placed on the users was meant to mimic the restraints placed on me all those years ago. This one was also definitely a more cohesive design than that of the 'Hint Fiction' and 'Ma' interactive works, delivering aspects of both the 'Oulipo' and that of my memory clearly.
 
 The design of this one is more playful than that of the previous two works, with a puzzle-solving-esque element making up the main interaction for the users. Both my 'Oulipo' and my 'Hint Fiction' works also lead me to want to explore more narrative-based interactions, games with plot and storylines, which does end up influencing my last three works for this course.
+
+## Video Recording
+
+Here is a video recording of my interactive work:
+
+![Watch Me Draw](/static/assignment2/Oulipo.mp4)
