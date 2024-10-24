@@ -8,170 +8,220 @@ allow_math: true
 
 # Oulipo Reflection
 
-This interactive 'art' tool was created in response to the Japanese concept of 'Ma' and minimalist design. "Ma" presents the idea that there is meaning in empty spaces, and that it is a part of a whole, working together with everything else to create something complete.
+## The Plan
 
-My plan for this interactive work was to combine the ideas of 'Ma' with that of the traditional art of Chinese paper cutting. Paper cutting makes use of the empty negative space (the areas that are cut out) to help form the image a person wishes to make. I figured that I could replicate this experience by making it so that the users interacting with the website are clicking and dragging their mouse around a black space, and upon releasing their mouse a shape is formed and filled in white on screen, visually resembling a piece of paper that had a hole cut into it. Like so, users would have to carefully think as they go about using this art tool, as there is no undo button and any mistakes means users will have to start all over, much like how actual paper cutting is. ‘Ma’ provokes thought and gives meaning to empty spaces, and the intention of this work is for users to give meaning to the empty spaces they form themselves.
+Despite this work being placed on before the other ('Hint Finction') on my website, I had actually worked on this one second, after I finished the 'Hint Fiction'. For this second half of assignment 2, I chose to focus on the 'Oulipo' (or in full French: “Ouvroir de Littéreature Potentielle”, meaning the “Workshop for Potential Literature”). It is a constrained form of writing, which I thought would fit well with the memory I chose to represent in the work - that of me being strapped down to a table in a hospital in HongKong one day when I was running a high fever. 
 
-![Ma Ice Cream](/static/assignment1/ma.png)
+## The Process
 
-I had decided to code out the entire interactive work on my own using html, css and JavaScript as I was somewhat familiar with these coding languages after having taken both the 'Interactive Media' and the 'Creative Coding' courses in my 1st and 2nd years of study. 
+During my preparation for this interactice work, I had researched on different types of 'Oulipo' techniques, before ultimately focusing on the 'cut-up' technique, where you cut up lines of a piece of work to create a new story. My original idea was for there to be words scattered across the bottom of the website, and users could click and drag them across the screen to form sentences. Forming the right sentence would trigger a change in the website, such as an image appearing.
 
-![First Try](/static/assignment1/ma1.png)
+![OG Plan](/static/assignment2/og.png)
 
-For my first attempt at coding this work I had set up an ‘overlay’ on top of the canvas and changed the colour to white. I then set up several functions to allow for me to ‘erase’ this ‘overlay’. By clicking and dragging the mouse around on the screen, black rectangles appear, giving the appearance that the white ‘overlay’ has been erased to reveal the black canvas beneath it.
+Unfortunately however, due to my limited skills with the coding languages I have chosen, I was unable to get the physics/movement of the individual words the way I wanted it to be. The result was a clunky mess, with the words often clipping into each other when re-generated. Furthermore, placing the words in the correct sequence did not trigger any change in the environment, and so I decided to try and do something else instead.
 
-The result was something similar to that of the 'eraser' tool on any drawing program, and my goal was to create something akin to the 'lasso' tool. 
+![OG Plan](/static/assignment2/fail.png)
 
-![Second Try](/static/assignment1/ma2.png)
+Taking inspiration from the grid-like model I saw on the Canvas slides during class, I decided to have my work take the form of two 4x3 grids, where users will have to click the right words in the right sequence to form a sentence describing what had happened that day in the hospital room. Triggering the right sequence of words also causes the background to change, whilst pressing the wrong word resets the entire thing.
 
-My second attempt yielded results closer to what I set out to do. Users can now draw out a shape when they click and hold their left mouse button, and upon release the shape will automatically be filled in. Each new click resets the canvas, so users had to think very carefully about what they're trying to make, and when they should release their mouse.
+![Oulipo Grids](/static/assignment2/oulipo.png)
 
-This attempt had quite a few limits and constraints restricting the user, but I decided to try again with the code, as I want the users to be able to draw as much as they want on one canvas, instead of it happening only once. In Paper Cutting too, people can cut as many times as they want, what really mattered was where they cut, and so I wished to keep this 'function': you can draw as much as you want on the work, it's just a matter of where you draw your lines.
+Just like the previous assignment, I had decided to code out the entire interactive work on my own using html, css and JavaScript. The process for this second attempt went much smoother and faster than the first, and I was able to finish the code needed in less than a day, with the finished product being what I expected it to be.
 
-![Second Try](/static/assignment1/ma3.png)
+![Oulipo End](/static/assignment2/oulipo1.png)
 
 ```html
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MA as an Interactive Art Tool</title>
+    <title>Hint Fiction</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <div id="canvas-container">
-        <canvas id="canvas"></canvas>
+    <div id="story-container">
+        <div class="sentence" id="sentence1">It</div>
+        <div class="sentence" id="sentence2">Squirmed</div>
+        <div class="sentence" id="sentence3">About</div>
+        <div class="sentence" id="sentence4">Its</div>
+        <div class="sentence" id="sentence5">Cage</div>
     </div>
     <script src="script.js"></script>
 </body>
-
 </html>
 ```
 ```css
 body {
     margin: 0;
-    padding: 0;
     overflow: hidden;
-    background: #000;
+    background-color: #f0f8ff;
+    font-family: Arial, sans-serif;
+    position: relative;
 }
 
-canvas {
-    display: block;
-    cursor: crosshair;
+#story-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url(img/background1.png);
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+}
+
+.sentence {
+    position: absolute;
+    font-size: 24px;
+    margin: 5px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    color: whitesmoke;
+    text-shadow: 2px 2px 0 black, 
+                 -2px -2px 0 black,  
+                 2px -2px 0 black,  
+                 -2px 2px 0 black;
+}
+
+#sentence1 {
+    top: 10%;
+    left: 10%;
+}
+
+#sentence2 {
+    top: 20%;
+    left: 30%;
+}
+
+#sentence3 {
+    top: 40%;
+    left: 50%;
+}
+
+#sentence4 {
+    top: 60%;
+    left: 70%;
+}
+
+#sentence5 {
+    top: 80%;
+    left: 90%;
 }
 ```
 ```javascript
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+document.addEventListener('DOMContentLoaded', () => {
+    const sentences = [
+        "It squirmed about its cage",
+        "feasted upon the dead and",
+        "slept inside a blanket of",
+        "the finest silk biding time",
+        "until it finally was released",
+    ];
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+    const backgroundImages = [
+        'img/cage.jpg',
+        'img/feast.jpg',
+        'img/slept.jpg',
+        'img/blanket.webp',
+        'img/boil.webp',
+    ];
 
-ctx.fillStyle = '#000';
-ctx.fillRect(0, 0, canvas.width, canvas.height);
+    const container = document.getElementById('story-container');
+    let currentSentenceIndex = 0;
+    const usedPositions = [];
+    const spacing = 150;
+    let allSentencesDisplayed = false;
 
-let isDrawing = false;
-let points = [];
-const eraseColor = '#FFF';
-const shapes = []; 
-const erasedAreas = [];
+    function getUniquePosition() {
+        let top, left;
+        let isValidPosition = false;
 
-canvas.addEventListener('mousedown', (e) => {
-    isDrawing = true;
-    points = [];
-    addPoint(e);
-});
+        while (!isValidPosition) {
+            top = `${Math.random() * (container.clientHeight - spacing)}px`;
+            left = `${Math.random() * (container.clientWidth - spacing)}px`;
 
-canvas.addEventListener('mousemove', (e) => {
-    if (isDrawing) {
-        addPoint(e);
-        drawCurrentShape();
-    }
-});
-
-canvas.addEventListener('mouseup', () => {
-    if (isDrawing) {
-        isDrawing = false;
-        shapes.push(points.slice());
-        applyEraser(); 
-        drawAllShapes(); 
-    }
-});
-
-function addPoint(e) {
-    const rect = canvas.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    points.push({ x, y });
-}
-
-function drawCurrentShape() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    drawAllShapes();
-
-    ctx.strokeStyle = '#FFF';
-    ctx.lineWidth = 2;
-    ctx.beginPath();
-    ctx.moveTo(points[0].x, points[0].y);
-    for (let i = 1; i < points.length; i++) {
-        ctx.lineTo(points[i].x, points[i].y);
-    }
-    ctx.lineTo(points[0].x, points[0].y);
-    ctx.stroke();
-}
-
-function drawAllShapes() {
-    ctx.fillStyle = '#000';
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-    ctx.globalCompositeOperation = 'source-atop';
-    erasedAreas.forEach(area => {
-        ctx.fillStyle = eraseColor;
-        ctx.beginPath();
-        ctx.moveTo(area[0].x, area[0].y);
-        for (let i = 1; i < area.length; i++) {
-            ctx.lineTo(area[i].x, area[i].y);
+            isValidPosition = !isOverlapping(top, left);
         }
-        ctx.lineTo(area[0].x, area[0].y); 
-        ctx.fill();
-    });
-    ctx.globalCompositeOperation = 'source-over'; 
-}
 
-function applyEraser() {
-    erasedAreas.push(points.slice());
-    
-    ctx.globalCompositeOperation = 'destination-out';
-    shapes.forEach(shape => {
-        ctx.beginPath();
-        ctx.moveTo(shape[0].x, shape[0].y);
-        for (let i = 1; i < shape.length; i++) {
-            ctx.lineTo(shape[i].x, shape[i].y);
+        usedPositions.push({ top, left });
+        return { top, left };
+    }
+
+    function isOverlapping(top, left) {
+        return usedPositions.some(position => {
+            return Math.abs(parseInt(top) - parseInt(position.top)) < spacing &&
+                   Math.abs(parseInt(left) - parseInt(position.left)) < spacing;
+        });
+    }
+
+    function fadeOutAllSentences() {
+        const sentences = document.querySelectorAll('.sentence');
+        sentences.forEach(sentence => {
+            sentence.style.transition = 'opacity 0.5s';
+            sentence.style.opacity = 0;
+            setTimeout(() => {
+                if (sentence) {
+                    container.removeChild(sentence);
+                }
+            }, 500);
+        });
+    }
+
+    function changeBackgroundImage() {
+        if (backgroundImages.length > 0) {
+            const imageIndex = currentSentenceIndex % backgroundImages.length;
+            container.style.transition = 'background-image 0.5s';
+            container.style.backgroundImage = `url('${backgroundImages[imageIndex]}')`;
         }
-        ctx.lineTo(shape[0].x, shape[0].y);
-        ctx.fill();
+    }
+
+    function fadeInSentences() {
+        if (currentSentenceIndex >= sentences.length) {
+            allSentencesDisplayed = true;
+            return;
+        }
+
+        const sentenceElement = document.createElement('div');
+        sentenceElement.classList.add('sentence');
+        sentenceElement.id = `sentence${currentSentenceIndex + 6}`;
+        sentenceElement.textContent = sentences[currentSentenceIndex];
+        sentenceElement.style.opacity = 0;
+        container.appendChild(sentenceElement);
+
+        const { top, left } = getUniquePosition();
+        sentenceElement.style.top = top;
+        sentenceElement.style.left = left;
+
+        setTimeout(() => {
+            sentenceElement.style.transition = 'opacity 0.5s';
+            sentenceElement.style.opacity = 1;
+        }, 10); // Short delay to ensure transition is applied
+
+        changeBackgroundImage();
+
+        currentSentenceIndex++;
+    }
+
+    document.addEventListener('click', () => {
+        if (allSentencesDisplayed) {
+            fadeOutAllSentences();
+            container.style.backgroundImage = '';
+            currentSentenceIndex = 0;
+            usedPositions.length = 0;
+            allSentencesDisplayed = false;
+        } else {
+            fadeInSentences();
+        }
     });
-    
-    ctx.globalCompositeOperation = 'source-over';
-}
-
-window.addEventListener('resize', () => {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-
-    ctx.fillStyle = '#000';
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-    drawAllShapes();
 });
 ```
 
-For my final attempt I was able to change the code to allow for multiple attempts at drawing, and the canvas will only refresh if you refresh the page. There is no undo button, and so users will either have to think very carefully where they're drawing, or constantly restart until they manage to make what they wanted to make.
+## The Outcome
 
-I was most satisfied with this version as it most closely reflected the act of Paper Cutting - or at least, as much as I was able to do with my limited abilities in coding.
+Working on this second half of the assignment was definitely a lot easier than the first half, and though I did encounter some problems with my initial iteration of the work, I was able to overcome this fairly quickly. Part of this was due to the limited time I had, as I had been down with a cold for one week, then by an allergic reaction to my medication the next. I then struggled with the other half of the assignment, having spent time on it until I only had 2 days' time to start and finish this one. The looming deadline wass most definitely a motivating factor, as well as the sheer frustration I felt over the other interactive work.
+
+Despite all that though, I was still quite satisfied with the finished product for this one. Of course, if I had more time I might have made more sentences the users could play around with, or drawn out the scenes instead of using image substitutes. I do think that the way it ended up being had fit quite well with the themes of limits and constraints we had, with the limited 
 
 The final interactive work was something that was rather fun to play around with once you get into it, however, as mentioned in the comment for this assignment, the depth of the concept is somewhat lacking, with the focus of interaction split into two: the clicking and dragging of the mouse, and the interplay between positive and negative spaces. I was too focused on trying to create a digitalised version of Paper Cutting, that I lost focus on what the assignment brief was actually asking of us and to draw the users focus on to a specific interaction.
 
