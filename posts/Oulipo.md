@@ -10,7 +10,7 @@ allow_math: true
 
 ## The Plan
 
-Despite this work being placed on before the other ('Hint Finction') on my website, I had actually worked on this one second, after I finished the 'Hint Fiction'. For this second half of assignment 2, I chose to focus on the 'Oulipo' (or in full French: “Ouvroir de Littéreature Potentielle”, meaning the “Workshop for Potential Literature”). It is a constrained form of writing, which I thought would fit well with the memory I chose to represent in the work - that of me being strapped down to a table in a hospital in HongKong one day when I was running a high fever. 
+For this second half of assignment 2, I chose to focus on the 'Oulipo' (or in full French: “Ouvroir de Littéreature Potentielle”, meaning the “Workshop for Potential Literature”). It is a constrained form of writing, which I thought would fit well with the memory I chose to represent in the work - that of me being strapped down to a table in a hospital in HongKong one day when I was running a high fever. 
 
 ## The Process
 
@@ -26,7 +26,7 @@ Taking inspiration from the grid-like model I saw on the Canvas slides during cl
 
 ![Oulipo Grids](/static/assignment2/oulipo.png)
 
-Just like the previous assignment, I had decided to code out the entire interactive work on my own using html, css and JavaScript. The process for this second attempt went much smoother and faster than the first, and I was able to finish the code needed in less than a day, with the finished product being what I expected it to be.
+Just like the previous assignment, I had decided to code out the entire interactive work on my own using html, css and JavaScript. The process for this second attempt went much smoother and faster than the first, and I was able to finish the code needed in less than a day, with the finished product being what I expected it to be. I chose for there to be 3 different sentences the users have to piece together, each describing a different perspective/thing that was happening in the hospital room at the time.
 
 ![Oulipo End](/static/assignment2/oulipo1.png)
 
@@ -221,8 +221,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 Working on this second half of the assignment was definitely a lot easier than the first half, and though I did encounter some problems with my initial iteration of the work, I was able to overcome this fairly quickly. Part of this was due to the limited time I had, as I had been down with a cold for one week, then by an allergic reaction to my medication the next. I then struggled with the other half of the assignment, having spent time on it until I only had 2 days' time to start and finish this one. The looming deadline wass most definitely a motivating factor, as well as the sheer frustration I felt over the other interactive work.
 
-Despite all that though, I was still quite satisfied with the finished product for this one. Of course, if I had more time I might have made more sentences the users could play around with, or drawn out the scenes instead of using image substitutes. I do think that the way it ended up being had fit quite well with the themes of limits and constraints we had, with the limited 
+Despite all that though, I was still quite satisfied with the finished product for this one. Of course, if I had more time I might have made more sentences the users could play around with, or drawn out the scenes instead of using image substitutes. I do think that the way it ended up being had fit quite well with the themes of limits and constraints we had, and the fact that there are no instructions - so the users have to guess and figure out themselves what they're meant to do - parallels how I felt all those years ago, strapped down to a table, not knowing what was happening. As users piece together the sentences they slowly come to understand the story(?) that is being told, and the image appearing in the background once a sentence is complete further drives it home.
 
-The final interactive work was something that was rather fun to play around with once you get into it, however, as mentioned in the comment for this assignment, the depth of the concept is somewhat lacking, with the focus of interaction split into two: the clicking and dragging of the mouse, and the interplay between positive and negative spaces. I was too focused on trying to create a digitalised version of Paper Cutting, that I lost focus on what the assignment brief was actually asking of us and to draw the users focus on to a specific interaction.
+The final interactive work was something that can be frustrating to newcomers, as they do have to try and memorise the sequence of when and what to click. This was an intentional part of the design, as the limits placed on the users was meant to mimic the restraints placed on me all those years ago. This one was also definitely a more cohesive design than that of the 'Hint Fiction' and 'Ma' interactive works, delivering aspects of both the 'Oulipo' and that of my memory clearly.
 
-Despite this failure, I do think that for the first assignment, it was a fairly okay piece of work. I had a smooth journey in making this interactive work, having come up with the idea for it immediately in class, as well as being familiar enough with the chosen coding languages to produce a working website. Though this was my least 'playful' work of the six, it was still something that offered a fun interaction, something that will set the tone for the rest of my interactive pieces.
+The design of this one is more playful than that of the previous two works, with a puzzle-solving-esque element making up the main interaction for the users. Both my 'Oulipo' and my 'Hint Fiction' works also lead me to want to explore more narrative-based interactions, games with plot and storylines, which does end up influencing my last three works for this course.
