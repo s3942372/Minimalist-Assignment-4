@@ -14,25 +14,25 @@ This interactive 'art' tool was created in response to the Japanese concept of '
 
 My plan for this interactive work was to combine the ideas of 'Ma' with that of the traditional art of Chinese paper cutting. Paper cutting makes use of the empty negative space (the areas that are cut out) to help form the image a person wishes to make. I figured that I could replicate this experience by making it so that the users interacting with the website are clicking and dragging their mouse around a black space, and upon releasing their mouse a shape is formed and filled in white on screen, visually resembling a piece of paper that had a hole cut into it. Like so, users would have to carefully think as they go about using this art tool, as there is no undo button and any mistakes means users will have to start all over, much like how actual paper cutting is. ‘Ma’ provokes thought and gives meaning to empty spaces, and the intention of this work is for users to give meaning to the empty spaces they form themselves.
 
-![Ma Ice Cream](/static/assignment1/ma.png)
+![Ma Ice Cream](/assignment1/ma.png)
 
 I had decided to code out the entire interactive work on my own using html, css and JavaScript as I was somewhat familiar with these coding languages after having taken both the 'Interactive Media' and the 'Creative Coding' courses in my 1st and 2nd years of study. 
 
 ## The Process
 
-![First Try](/static/assignment1/ma1.png)
+![First Try](/assignment1/ma1.png)
 
 For my first attempt at coding this work I had set up an ‘overlay’ on top of the canvas and changed the colour to white. I then set up several functions to allow for me to ‘erase’ this ‘overlay’. By clicking and dragging the mouse around on the screen, black rectangles appear, giving the appearance that the white ‘overlay’ has been erased to reveal the black canvas beneath it.
 
 The result was something similar to that of the 'eraser' tool on any drawing program, and my goal was to create something akin to the 'lasso' tool. 
 
-![Second Try](/static/assignment1/ma2.png)
+![Second Try](/assignment1/ma2.png)
 
 My second attempt yielded results closer to what I set out to do. Users can now draw out a shape when they click and hold their left mouse button, and upon release the shape will automatically be filled in. Each new click resets the canvas, so users had to think very carefully about what they're trying to make, and when they should release their mouse.
 
 This attempt had quite a few limits and constraints restricting the user, but I decided to try again with the code, as I want the users to be able to draw as much as they want on one canvas, instead of it happening only once. In Paper Cutting too, people can cut as many times as they want, what really mattered was where they cut, and so I wished to keep this 'function': you can draw as much as you want on the work, it's just a matter of where you draw your lines.
 
-![Second Try](/static/assignment1/ma3.png)
+![Second Try](/assignment1/ma3.png)
 
 ```html
 <!DOCTYPE html>
@@ -187,4 +187,4 @@ Despite this failure, I do think that for the first assignment, it was a fairly 
 
 Here is a video recording of my interactive work:
 
-[Watch Me Draw](/static/assignment1/s3942372_A1_Recording.mp4)
+[Watch Me Draw](/assignment1/s3942372_A1_Recording.mp4)

@@ -16,19 +16,19 @@ For this second half of assignment 2, I chose to focus on the 'Oulipo' (or in fu
 
 During my preparation for this interactive work, I had researched on different types of 'Oulipo' techniques, before ultimately focusing on the 'cut-up' technique, where you cut up lines of a piece of work to create a new story. My original idea was for there to be words scattered across the bottom of the website, and users could click and drag them across the screen to form sentences. Forming the right sentence would trigger a change in the website, such as an image appearing.
 
-![OG Plan](/static/assignment2/og.png)
+![OG Plan](/assignment2/og.png)
 
 Unfortunately however, due to my limited skills with the coding languages I have chosen, I was unable to get the physics/movement of the individual words the way I wanted it to be. The result was a clunky mess, with the words often clipping into each other when re-generated. Furthermore, placing the words in the correct sequence did not trigger any change in the environment, and so I decided to try and do something else instead.
 
-![OG Plan](/static/assignment2/fail.png)
+![OG Plan](/assignment2/fail.png)
 
 Taking inspiration from the grid-like model I saw on the Canvas slides during class, I decided to have my work take the form of two 4x3 grids, where users will have to click the right words in the right sequence to form a sentence describing what had happened that day in the hospital room. Triggering the right sequence of words also causes the background to change, whilst pressing the wrong word resets the entire thing.
 
-![Oulipo Grids](/static/assignment2/oulipo.png)
+![Oulipo Grids](/assignment2/oulipo.png)
 
 Just like the previous assignment, I had decided to code out the entire interactive work on my own using html, css and JavaScript. The process for this second attempt went much smoother and faster than the first, and I was able to finish the code needed in less than a day, with the finished product being what I expected it to be. I chose for there to be 3 different sentences the users have to piece together, each describing a different perspective/thing that was happening in the hospital room at the time.
 
-![Oulipo End](/static/assignment2/oulipo1.png)
+![Oulipo End](/assignment2/oulipo1.png)
 
 ```html
 <!DOCTYPE html>
@@ -213,4 +213,4 @@ The design of this one is more playful than that of the previous two works, with
 
 Here is a video recording of my interactive work:
 
-[Oulipo Recording](/static/assignment2/Oulipo.mp4)
+[Oulipo Recording](/assignment2/Oulipo.mp4)
