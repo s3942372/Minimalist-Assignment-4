@@ -18,23 +18,23 @@ For the first half of assignment 2, I chose to focus on the topic of 'Hint Ficti
 
 I decided to write my own 'Hint Fiction' story based on the memory, and kept the words ambiguous enough that users wouldn't immediately link it to silkworms. This was fairly easy to do, and within 5 minutes I had my story: "It squirmed about its cage, feasted upon the dead and slept inside a blanket of the finest silk, biding time until it finally was released."
 
-![Reasoning](/static/assignment2/hintfiction.png)
+![Reasoning](/assignment2/hintfiction.png)
 
 My initial plan with this interactive work was a more game-like website with different stages representing the different stages of the silkworms' lives as we raised them. Stage one would have users clicking leaves and watching a silkworm move around on screen and 'eating' them. Stage two would occur right after the last leaf is eaten, where users can click on a stick and the silkworm would move over to it and become a cocoon. Stage three would have the users click on or drag the cocoon around. After clicking enough/dragging too far the cocoon would be animated to drop down the screen and into a pot of boiling water that appears. Stage four would have users click on the ladle in the pot to stir it around, and after enough stirs the end is triggered, with the ladle being lifted from the pot with strands of silk clinging to it, and a congratulatory message appears on screen.
 
-![OG Plan](/static/assignment2/og1.png)
+![OG Plan](/assignment2/og1.png)
 
 Unfortunately however, due to my limited skills with the coding languages I have chosen, I was unable to code past the stage where the silkworm becomes a cocoon, much to my frustration. No matter what I tried and how much of the code I've changed, the transition into the pot just wouldn't happen. I even got desperate enough to try and coonsult ChatGPT on how to fix my code, only for ChatGPT to fail to fix it too, and not only fail to fix it, but break everything else as well, resulting in me having to spend more time reworking everything back to how it was.
 
-![OG Plan](/static/assignment2/hintfiction1.png)
+![OG Plan](/assignment2/hintfiction1.png)
 
 I was then running on less than four days to not only finish my 'Hint Fiction' work, but also to start and finish my 'Oulipo' interactive work as well. Things were not looking up with the initial idea, so I had to pivot. Instead of the game(?) I had originally planned, I decided to instead double down on the storytelling element, breaking the 'Hint Fiction' I wrote into 5 lines and coding it so that each time the user clicks on screen, one line appears accompanied by a change of image in the background. A far cry from the original idea, but at this point I was just desperate to finish and move on.
 
-![Terrible Interactive Novel](/static/assignment2/hintfiction2.png)
+![Terrible Interactive Novel](/assignment2/hintfiction2.png)
 
 Just like the previous attempt, I had decided to code out the entire interactive work on my own using html, css and JavaScript. The process for this second attempt went much smoother and faster than the first, and I was able to finish the code needed in less than a day, with the finished product being something I was most definitely not satisfied with, but had to make do with anyways. I added a screenshot with the instruction to click the screen and coded it so that it appears first when you load up the website before deciding that the work was as complete as I could get it before moving on to start my 'Oulipo' work.
 
-![Honestly My Greatest Shame](/static/assignment2/hintfiction3.png)
+![Honestly My Greatest Shame](/assignment2/hintfiction3.png)
 
 ```html
 <!DOCTYPE html>
@@ -237,4 +237,4 @@ Although this work did show elements of 'Hint Fiction' with its sequential struc
 
 Here is a video recording of my interactive work:
 
-[An Absolute Disappointment](/static/assignment2/Hint_Fiction_2.mp4)
+![An Absolute Disappointment](/assignment2/Hint_Fiction_2.mp4)
