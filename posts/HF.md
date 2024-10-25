@@ -24,7 +24,7 @@ My initial plan with this interactive work was a more game-like website with dif
 
 Unfortunately however, due to my limited skills with the coding languages I have chosen, I was unable to code past the stage where the silkworm becomes a cocoon, much to my frustration. No matter what I tried and how much of the code I've changed, the transition into the pot just wouldn't happen. I even got desperate enough to try and coonsult ChatGPT on how to fix my code, only for ChatGPT to fail to fix it too, and not only fail to fix it, but break everything else as well, resulting in me having to spend more time reworking everything back to how it was.
 
-![OG Plan](/assignment2/hintfiction1.png)
+![OG Look](/assignment2/hintfiction1.png)
 
 I was then running on less than four days to not only finish my 'Hint Fiction' work, but also to start and finish my 'Oulipo' interactive work as well. Things were not looking up with the initial idea, so I had to pivot. Instead of the game(?) I had originally planned, I decided to instead double down on the storytelling element, breaking the 'Hint Fiction' I wrote into 5 lines and coding it so that each time the user clicks on screen, one line appears accompanied by a change of image in the background. A far cry from the original idea, but at this point I was just desperate to finish and move on.
 
@@ -231,18 +231,4 @@ The initial shock factor I had planned to use in the first idea - that of the si
 
 Although this work did show elements of 'Hint Fiction' with its sequential structure, it still wasn't a good end product (or at the very least, one I was satisfied with) and it had a much less cohesive design than the rest of my interactive works. Both the final and initial ideas did push me further into wanting to explore more narrative-based games and interactions though, as I have always liked games and storytelling (I would, after all, like to one day work on the narratives in games), which can be seen later on in my last three works for this course.
 
-## Video Recording
 
-Here is a video recording of my interactive work:
-
-<iframe id="hint_fiction" src="/assignment2/Hint_Fiction_2.mp4" title="video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-<script type="module">
-
-    console.log (`hello world! 🚀`)
-
-    const iframe  = document.getElementById (`hint_fiction`)
-    iframe.width  = iframe.parentNode.scrollWidth
-    iframe.height = iframe.width * 9 / 16
-
-</script>

@@ -10,243 +10,48 @@ allow_math: true
 
 ## The Plan
 
-Why wont you work?
+For assignment 3, we had to develop 3 games that persuade the players of something. Looking at the different topics available (persuasive games, micro-games, microcinema, etc.) I decided to focus on the topic of persuasive games for all 3 of the games I was developing. This project, 'My Dress Up Doll', is placed before the other two because it was developed first. Its concept is based on the personal experience of being told what to wear - and, to a lesser degree - being told who to be. The game takes place in a bedroon setting, with a pre-teen called Harper. Although not mentioned, the player is actually playing from the perspective of Harper's mom. What I am trying to persuade the players is that you should not *control* another person's identity.
 
-For the first half of assignment 2, I chose to focus on the topic of 'Hint Fiction' (a form of extremely short story that is told in 25 words or less). When it comes to 'Hint Fiction', the more constraints, the greater the creation - and in this case - the less words, the more expansive the story. Because of this, what a hint fiction story is about is often up to interpretation. I wanted to try and utilise this aspect for the memory I chose: that of raising silkworms in class during 3rd grade, only for them to be taken and made into silk the minute they turned into cocoons.
+![Dress Them Up](/assignment3/mdud.png)
 
 ## The Process
 
-I decided to write my own 'Hint Fiction' story based on the memory, and kept the words ambiguous enough that users wouldn't immediately link it to silkworms. This was fairly easy to do, and within 5 minutes I had my story: "It squirmed about its cage, feasted upon the dead and slept inside a blanket of the finest silk, biding time until it finally was released."
+As persuasive games are often used to make statements - and I *am* making a statement - I had to conduct research to ensure I understand the topic I was going to convince people of. I have chosen the topic of identity because it was something personal to each individual, and people often hate it when others try and dictate their identity for them. My research lead me to finding the importance of identity in clothing, how what you wear changes another's perception of you. Clothing is, in a way, a somewhat intimate way of getting to know another person. Similarly, a person's identity is practically always influenced by the people around them - most notably those who raised them. I wanted to pit these two concepts against each other, and adding in personal experience and that of some of my friends, I decided to make a 'dress-up' game.
 
-![Reasoning](/assignment2/hintfiction.png)
+![Gameplay](/assignment3/mdud1.png)
 
-My initial plan with this interactive work was a more game-like website with different stages representing the different stages of the silkworms' lives as we raised them. Stage one would have users clicking leaves and watching a silkworm move around on screen and 'eating' them. Stage two would occur right after the last leaf is eaten, where users can click on a stick and the silkworm would move over to it and become a cocoon. Stage three would have the users click on or drag the cocoon around. After clicking enough/dragging too far the cocoon would be animated to drop down the screen and into a pot of boiling water that appears. Stage four would have users click on the ladle in the pot to stir it around, and after enough stirs the end is triggered, with the ladle being lifted from the pot with strands of silk clinging to it, and a congratulatory message appears on screen.
+For this game, I had decided to use the engine 'Scratch' to make it, having been introduced to the engine during one of the weekly lectures. It is basically a simplified method of coding, which I needed and wanted desperately after the failure that was my 'Hint Fiction' work. I found the premade assests of a bedroom background, clothing, as well as Harper, and brought them all into the game editor, before cutting them apart into individual sections such as headpieces, right arm, left arm, torso, hair, etc. I then added several different expressions that Harper could change into overtime as the game went on.
 
-![OG Plan](/assignment2/og1.png)
+![Arms and All That](/assignment3/mdud2.png)
 
-Unfortunately however, due to my limited skills with the coding languages I have chosen, I was unable to code past the stage where the silkworm becomes a cocoon, much to my frustration. No matter what I tried and how much of the code I've changed, the transition into the pot just wouldn't happen. I even got desperate enough to try and coonsult ChatGPT on how to fix my code, only for ChatGPT to fail to fix it too, and not only fail to fix it, but break everything else as well, resulting in me having to spend more time reworking everything back to how it was.
+I then started the 'coding'. I made it so that each time a part of Harper is clicked on, it can change. I also gave instructions to click on Harper's clothes. The intention was for the players to click on the clothes first, like a normal dress up game, before they accidentally click on one of Harper's limbs or their face and find out that they can change that too.
 
-![OG Plan](/assignment2/hintfiction1.png)
+![And It Gets Worse](/assignment3/mdud3.png)
 
-I was then running on less than four days to not only finish my 'Hint Fiction' work, but also to start and finish my 'Oulipo' interactive work as well. Things were not looking up with the initial idea, so I had to pivot. Instead of the game(?) I had originally planned, I decided to instead double down on the storytelling element, breaking the 'Hint Fiction' I wrote into 5 lines and coding it so that each time the user clicks on screen, one line appears accompanied by a change of image in the background. A far cry from the original idea, but at this point I was just desperate to finish and move on.
+I then added code so that the more time you spend on clicking Harper and the more clicks you make, the more upset Harper's expression becomes, with the final expression being them crying over what the player is doing.
 
-![Terrible Interactive Novel](/assignment2/hintfiction2.png)
+![And It Gets Worse](/assignment3/mdud4.png)
 
-Just like the previous attempt, I had decided to code out the entire interactive work on my own using html, css and JavaScript. The process for this second attempt went much smoother and faster than the first, and I was able to finish the code needed in less than a day, with the finished product being something I was most definitely not satisfied with, but had to make do with anyways. I added a screenshot with the instruction to click the screen and coded it so that it appears first when you load up the website before deciding that the work was as complete as I could get it before moving on to start my 'Oulipo' work.
+I had originally considered doing an alternative ending, where, if the player leaves Harper alone for a loong enough period of time, then Harper becomes happier and dresses themselves. I wasn't able to do this, as I had already cut Harper up and this being my first time using Scratch, I wasn't able to make it so that Harper changed clothes after having nothing done to them. I did however make it so that their starting expression was a happy-looking one, so users had two choices: either leave Harper be and they keep that happy expression, or start clicking and watch as over time they get more and more upset.
 
-![Honestly My Greatest Shame](/assignment2/hintfiction3.png)
+I chose to not add any music to this game, as I thought that in a way, this was the most serious and personal persuasive game, and so I should not have any elements that take away from it. Similarly, why the other two faces Harper's could change into are ill-fitting is the idea that the players are fully forcing them to be someone else. The players are not meant to be comfortable looking at it, the way you might not be comfortable looking at someone who's pretending to be someone else in real life.
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hint Fiction</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div id="story-container">
-        <div class="sentence" id="sentence1">It</div>
-        <div class="sentence" id="sentence2">Squirmed</div>
-        <div class="sentence" id="sentence3">About</div>
-        <div class="sentence" id="sentence4">Its</div>
-        <div class="sentence" id="sentence5">Cage</div>
-    </div>
-    <script src="script.js"></script>
-</body>
-</html>
-```
-```css
-body {
-    margin: 0;
-    overflow: hidden;
-    background-color: #f0f8ff;
-    font-family: Arial, sans-serif;
-    position: relative;
-}
+![And It Gets Worse](/assignment3/mdud5.png)
 
-#story-container {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    background-image: url(img/background1.png);
-    background-size: cover;
-    background-position: center;
-    cursor: pointer;
-}
+Part of this assignment was needing to collect feedback. Most players have enjoyed the game and found the gameplay mechanics easy to understand, and that the game was a persuasive game. Parts that were frustrating to players were the layers of the changeable items, of which I tried to fix for the clothing layers and left as is for the body parts as those were meant to be that way. Once I finished editing the game in response to the feedback I decided to move on to working on the rest of assignment 3.
 
-.sentence {
-    position: absolute;
-    font-size: 24px;
-    margin: 5px;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-    color: whitesmoke;
-    text-shadow: 2px 2px 0 black, 
-                 -2px -2px 0 black,  
-                 2px -2px 0 black,  
-                 -2px 2px 0 black;
-}
+![And It Gets Worse](/assignment3/mdud6.png)
 
-#sentence1 {
-    top: 10%;
-    left: 10%;
-}
-
-#sentence2 {
-    top: 20%;
-    left: 30%;
-}
-
-#sentence3 {
-    top: 40%;
-    left: 50%;
-}
-
-#sentence4 {
-    top: 60%;
-    left: 70%;
-}
-
-#sentence5 {
-    top: 80%;
-    left: 90%;
-}
-```
-```javascript
-document.addEventListener('DOMContentLoaded', () => {
-    const sentences = [
-        "It squirmed about its cage",
-        "feasted upon the dead and",
-        "slept inside a blanket of",
-        "the finest silk biding time",
-        "until it finally was released",
-    ];
-
-    const backgroundImages = [
-        'img/cage.jpg',
-        'img/feast.jpg',
-        'img/slept.jpg',
-        'img/blanket.webp',
-        'img/boil.webp',
-    ];
-
-    const container = document.getElementById('story-container');
-    let currentSentenceIndex = 0;
-    const usedPositions = [];
-    const spacing = 150;
-    let allSentencesDisplayed = false;
-
-    function getUniquePosition() {
-        let top, left;
-        let isValidPosition = false;
-
-        while (!isValidPosition) {
-            top = `${Math.random() * (container.clientHeight - spacing)}px`;
-            left = `${Math.random() * (container.clientWidth - spacing)}px`;
-
-            isValidPosition = !isOverlapping(top, left);
-        }
-
-        usedPositions.push({ top, left });
-        return { top, left };
-    }
-
-    function isOverlapping(top, left) {
-        return usedPositions.some(position => {
-            return Math.abs(parseInt(top) - parseInt(position.top)) < spacing &&
-                   Math.abs(parseInt(left) - parseInt(position.left)) < spacing;
-        });
-    }
-
-    function fadeOutAllSentences() {
-        const sentences = document.querySelectorAll('.sentence');
-        sentences.forEach(sentence => {
-            sentence.style.transition = 'opacity 0.5s';
-            sentence.style.opacity = 0;
-            setTimeout(() => {
-                if (sentence) {
-                    container.removeChild(sentence);
-                }
-            }, 500);
-        });
-    }
-
-    function changeBackgroundImage() {
-        if (backgroundImages.length > 0) {
-            const imageIndex = currentSentenceIndex % backgroundImages.length;
-            container.style.transition = 'background-image 0.5s';
-            container.style.backgroundImage = `url('${backgroundImages[imageIndex]}')`;
-        }
-    }
-
-    function fadeInSentences() {
-        if (currentSentenceIndex >= sentences.length) {
-            allSentencesDisplayed = true;
-            return;
-        }
-
-        const sentenceElement = document.createElement('div');
-        sentenceElement.classList.add('sentence');
-        sentenceElement.id = `sentence${currentSentenceIndex + 6}`;
-        sentenceElement.textContent = sentences[currentSentenceIndex];
-        sentenceElement.style.opacity = 0;
-        container.appendChild(sentenceElement);
-
-        const { top, left } = getUniquePosition();
-        sentenceElement.style.top = top;
-        sentenceElement.style.left = left;
-
-        setTimeout(() => {
-            sentenceElement.style.transition = 'opacity 0.5s';
-            sentenceElement.style.opacity = 1;
-        }, 10); // Short delay to ensure transition is applied
-
-        changeBackgroundImage();
-
-        currentSentenceIndex++;
-    }
-
-    document.addEventListener('click', () => {
-        if (allSentencesDisplayed) {
-            fadeOutAllSentences();
-            container.style.backgroundImage = '';
-            currentSentenceIndex = 0;
-            usedPositions.length = 0;
-            allSentencesDisplayed = false;
-        } else {
-            fadeInSentences();
-        }
-    });
-});
-```
+![And It Gets Worse](/assignment3/mdud7.png)
 
 ## The Outcome
 
-Working on this half of the assignment was definitely a lot more frustrating than any other work I've done for this course this semester, especially for my initial idea for 'Hint Fiction'. Never have I felt a greater urge to bash my head against a wall and end my mysery, and I was very miserable. My second idea was alot easier to implement, and I was able to get it up and running in less than a day, a matter which greatly frustrates me, especially since I had struggled so much with the previous idea. It didin't help that I was still recovering from a cold and an allergic reaction to my medication, so all in all it was a miserable time for me, which I do think was reflected in the amount of (or lack thereof) care I had put into this interactive work.
+'My Dress Up Doll' was definitely the weakest conceptually of my 3 persuasive games as it was the first one I worked on, as well as the first time I tried 'Scratch' out. It was a fun experiment on how I can place a darker theme in an otherwise cheerful-looking, innocuous dress-up game.
 
-This work, if I were to be generous, could be described as a short, interactive novel. I was definitely not satisfied with how it turned out, and, having now complete all of the required works for assignment 3, I can say that had I known 'Scratch' existed during this time, I most definitely would've - and should've - used that to code out my initial idea instead.
+Out of my 3 works, players did understand this the least and found it the least fun, which was understandable, as it does have very limited function (just clicking and seeing the parts change) and a statement that needed to be thought about alot to be understood. For example, one player commented on how they would like for there to be an achievement sound for when clothes match - which, while one could say that they came into the role of the 'guardian/parent' quite well, it also meant that they did not manage to fully understand what the game is trying to convince them of.
 
-The initial shock factor I had planned to use in the first idea - that of the silkworm you raised into becoming a cocoon and expected to become a beautiful little silkmoth, only for it to be dumped into a pot of water, killed and had its cocoon turned into silk - couldn't be implemented at all in this second version, as the story and the time it took for the interaction to play out is too short for any shock value. The game-like elements had to all be stripped off as well, only leaving behind the storytelling elements in the final product.
+This game used to be called 'Who Are They?' to make players question Harper's identity, and to make it more obvious that they are the ones deciding that. The name was later changed to 'My Dress Up Doll' to reflect how often, children (and others) are unable to prevent others (whether it's their guardian or parent or someone else) from deciding for them who they are. Harper is referred to as a 'doll' here to represent their inability to fight back, and how those in a position of power over them (again, parents and guardians in this game) often influence and choose their identity for them. Of course, this is not always the case everywhere in the world. However, the game was based on my experience in China and what I've seen of others - one could say it is a hyperbolic work.
 
-Although this work did show elements of 'Hint Fiction' with its sequential structure, it still wasn't a good end product (or at the very least, one I was satisfied with) and it had a much less cohesive design than the rest of my interactive works. Both the final and initial ideas did push me further into wanting to explore more narrative-based games and interactions though, as I have always liked games and storytelling (I would, after all, like to one day work on the narratives in games), which can be seen later on in my last three works for this course.
+Although this wrk was somewhat more narrative focused than my other game 'Drifting Off', it wasn't as fun or engaging as a game, so I had placed it before the other. I do think that it was a good middle ground as I transition into the more narrative and gameplay focused works that are the last two games though.
 
-## Video Recording
 
-Here is a video recording of my interactive work:
-
-[An Absolute Disappointment](/assignment2/Hint_Fiction_2.mp4)
-
-<iframe id="hint_fiction" src="/assignment2/Hint_Fiction_2.mp4" title="video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-<script type="module">
-
-    console.log (`hello world! 🚀`)
-
-    const iframe  = document.getElementById (`hint_fiction`)
-    iframe.width  = iframe.parentNode.scrollWidth
-    iframe.height = iframe.width * 9 / 16
-
-</script>
