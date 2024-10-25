@@ -1,7 +1,7 @@
 ---
 title: Drifting Off
 published_at: 2024-10-24
-snippet: Reflection of my third assignment part 1.
+snippet: Reflection of my third assignment part 2.
 disable_html_sanitization: true
 allow_math: true
 ---
@@ -24,7 +24,7 @@ For this game, I had decided to keep using the engine 'Scratch' to make it, as I
 
 ![Visual Assets](/assignment3/doff2.png)
 
-I then started the 'coding'. I made it so that the clouds will generate at random times and drift around at random speeds. The duck itself (representing me and the player and everyone who works while sleep deprived) cycles between different states of awake, drifting off, asleep and awake again. The clock in the background too was made to resembles a cuckoo clock, and every few seconds will open its little doors to reveal a tiny duck inside. This was made to often coincide with the frame of the duck waking up from its sleep to make it seem like its the clock sounding and waking the duck up.
+I then started the 'coding'. I made it so that the clouds will generate at random times and drift around at random speeds. The duck itself (representing me and the player and everyone who works while sleep deprived) cycles between different states of awake, drifting off, asleep and awake again. The clock in the background too was made to resembles a cuckoo clock, and every few seconds will open its little doors to reveal a tiny duck inside. This was made to often coincide with the frame of the duck waking up from its sleep to make it seem like its the clock sounding and waking the duck up. I also made it so that every once in a while, the duck has a thought bubble appear, and the words inside are ones I often think when sleep deprived and loopy from it.
 
 ![Code](/assignment3/doff3.png)
 
@@ -44,7 +44,7 @@ Part of this assignment was needing to collect feedback. Unfortunately, much of 
 
 ## The Outcome
 
-'Drifting Off' was stronger in concept and gameplay than 'My Dress Up Doll', but still most definitely weaker than that of 'Punchin' Time!'. From the feedback given from the assignment it was apparent that the visuals for this game took away certain elements and were a bit distracting. It also made it seem like it was about working and getting distracted, not sleep deprivation. This is mostly because I did shift from the concept being about porcrastination to sleep deprivation, as well as the visual elements of the clouds were representative of the feeling you get when sleep deprived, of feeling muddled and fuzzy and the longer you stayed awake the more 'clouded' and heavy your brain feels. Looking back now, perhaps I could add a filter that transitions in and out of focus to reflect this, or change the game to be in first person mode where you have to constantly click to fight to stay awake instead.
+'Drifting Off' was stronger in concept and gameplay than 'My Dress Up Doll', but still most definitely weaker than that of 'Punchin' Time!'. From the feedback given for the assignment it was apparent that the visuals for this game took away certain elements and were a bit distracting. It also made it seem like it was about working and getting distracted, not sleep deprivation. This is mostly because I did shift from the concept being about porcrastination to sleep deprivation, as well as the visual elements of the clouds were representative of the feeling you get when sleep deprived, of feeling muddled and fuzzy and the longer you stayed awake the more 'clouded' and heavy your brain feels. Looking back now, perhaps I could add a filter that transitions in and out of focus to reflect this, or change the game to be in first person mode where you have to constantly click to fight to stay awake instead.
 
 Out of my 3 games, This one was definitely more of a middle ground bridging between 'My Dress Up Doll' and 'Punchin' Time!' Gameplay wise, it retains much of its limited functions in that you can only click and watch as something happens, but there is much more going on on the screen. It feels more 'complete'.
 
