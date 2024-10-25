@@ -237,9 +237,9 @@ Although this work did show elements of 'Hint Fiction' with its sequential struc
 
 Here is a video recording of my interactive work:
 
-![An Absolute Disappointment](/assignment2/Hint_Fiction_2.mp4)
+[An Absolute Disappointment](/assignment2/Hint_Fiction_2.mp4)
 
-<iframe id="hint_fiction" src="(/assignment2/Hint_Fiction_2.mp4)" title="video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe id="hint_fiction" src="/assignment2/Hint_Fiction_2.mp4" title="video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 <script type="module">
 
