@@ -187,4 +187,14 @@ Despite this failure, I do think that for the first assignment, it was a fairly 
 
 Here is a video recording of my interactive work:
 
-[Watch Me Draw](/assignment1/s3942372_A1_Recording.mp4)
+<iframe id="ma" src="/assignment1/s3942372_A1_Recording.mp4" title="video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<script type="module">
+
+    console.log (`hello world! 🚀`)
+
+    const iframe  = document.getElementById (`ma`)
+    iframe.width  = iframe.parentNode.scrollWidth
+    iframe.height = iframe.width * 9 / 16
+
+</script>

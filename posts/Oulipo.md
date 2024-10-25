@@ -213,4 +213,14 @@ The design of this one is more playful than that of the previous two works, with
 
 Here is a video recording of my interactive work:
 
-[Oulipo Recording](/assignment2/Oulipo.mp4)
+<iframe id="oulipo" src="/assignment2/Oulipo.mp4" title="video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<script type="module">
+
+    console.log (`hello world! 🚀`)
+
+    const iframe  = document.getElementById (`oulipo`)
+    iframe.width  = iframe.parentNode.scrollWidth
+    iframe.height = iframe.width * 9 / 16
+
+</script>
